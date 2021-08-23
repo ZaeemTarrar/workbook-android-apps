@@ -1,49 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/teal_700"
-    android:orientation="vertical"
     tools:context=".MainActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:background="@color/teal_700"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:contentDescription="@string/android_image_description"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/android_image_description"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/main_title_style"
-        android:text="@string/main_title_text" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/main_title_style"
+            android:text="@string/main_title_text" />
 
-    <EditText
-        android:id="@+id/hobby_input"
-        style="@style/main_title_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enter_hobbies_hint"
-        android:inputType="textPersonName"
-        android:text="@string/enter_hobbies_text" />
+        <EditText
+            android:id="@+id/hobby_input"
+            style="@style/main_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_hobbies_hint"
+            android:inputType="textPersonName"
+            android:text="@string/enter_hobbies_text" />
 
-    <Button
-        android:id="@+id/hobby_button"
-        style="@style/main_title_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="addHobby"
-        android:text="@string/hobbies_button_text" />
+        <Button
+            android:id="@+id/hobby_button"
+            style="@style/main_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addHobby"
+            android:text="@string/hobbies_button_text" />
 
-    <TextView
-        android:id="@+id/hobby_result"
-        style="@style/main_title_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/result_hobbies_text"
-        android:visibility="gone" />
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:id="@+id/hobby_result"
+            style="@style/main_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result_hobbies_text"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/aldrich"
+                android:layoutDirection="inherit"
+                android:lineSpacingMultiplier="1.9"
+                android:padding="10dp"
+                android:text="@string/my_bio_description"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
