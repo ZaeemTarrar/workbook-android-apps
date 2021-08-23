@@ -28,6 +28,11 @@ Every Screen View is said to be an Activity in Android App Development
 - R
 	- R.id.{}
 	- r.color.{}
+- InputMethodManager ( to hide keypad after usage )
+```java
+InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
+```
 
 
 ## Resources

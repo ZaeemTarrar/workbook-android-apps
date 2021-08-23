@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyDroid2</string>
+    <string name="android_image_description">image of the face of the android bt</string>
+    <string name="enter_hobbies_hint">Enter Hobbies</string>
+    <string name="main_title_text">My Application</string>
+    <string name="enter_hobbies_text" />
+    <string name="result_hobbies_text">Hobbies:</string>
+    <string name="hobbies_button_text">Add Hobby</string>
 </resources>
