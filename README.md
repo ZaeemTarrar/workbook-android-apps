@@ -72,6 +72,8 @@ inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
 		- Frame Layout
 			- Scroll View
 
+## Binding
+
 ### View Binding
 
 ```java
@@ -160,3 +162,46 @@ binding.hobbyButton.setOnClickListener(this::addHobby);
 ```
 
 Then, remove Event Listeners from the Activity XML File
+
+### Data Binding
+
+Create a Package with the Main Activity and Create a Class in a Data Folder
+
+Then, add Data Variables in the XML
+
+```xml
+<data>
+    <variable name="bio" type="com.example.mydroid2.data.Bio" />
+</data>
+```
+
+Connect View Tags wit the Data
+
+```xml
+ <TextView
+    android:id="@+id/textView"
+    style="@style/main_title_style"
+    android:text="@{bio.name}" />
+```
+
+Create the Class Instance in the Activity
+
+```java
+private final Bio bio = new Bio();
+```
+
+Then, Bind the Data 
+
+```java
+ bio.setName("Zaeem");
+ binding.setBio(bio);
+```
+
+Then, Change Usage Formation
+
+```java
+ bio.setHobbies("Hobbies: "+binding.hobbyInput.getText().toString());
+ binding.hobbyInput.setText("");
+ binding.invalidateAll();
+ binding.hobbyResult.setVisibility(View.VISIBLE);
+```

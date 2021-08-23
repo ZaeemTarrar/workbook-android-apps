@@ -10,46 +10,29 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.mydroid2.data.Bio;
 import com.example.mydroid2.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
     private ActivityMainBinding binding;
-    
-//    private TextView hobbyBar;
-//    private Button hobbyButton;
-//    private TextView hobbyResult;
+
+    private final Bio bio = new Bio();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-
-//        hobbyBar = findViewById(R.id.hobby_input);
-//        hobbyButton = findViewById(R.id.hobby_button);
-//        hobbyResult = findViewById(R.id.hobby_result);
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
-//        binding.hobbyButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                addHobby(view);
-//            }
-//        });
+        bio.setName("Zaeem");
+        binding.setBio(bio);
 
         binding.hobbyButton.setOnClickListener(this::addHobby);
     }
 
     public void addHobby(View view) {
-//        String data = hobbyBar.getText().toString();
-//        hobbyBar.setText("");
-//        hobbyResult.setText("Hobbies: "+data.toString());
-//        hobbyResult.setVisibility(View.VISIBLE);
-
-        String data = binding.hobbyInput.getText().toString();
+        bio.setHobbies("Hobbies: "+binding.hobbyInput.getText().toString());
         binding.hobbyInput.setText("");
-        binding.hobbyResult.setText("Hobbies: "+data.toString());
         binding.invalidateAll();
         binding.hobbyResult.setVisibility(View.VISIBLE);
 
