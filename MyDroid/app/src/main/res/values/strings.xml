@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyDroid</string>
+    <string name="main_title">You Have:</string>
+    <string name="money_value">$0</string>
+    <string name="makeItRain">Make It Rain</string>
+    <string name="showInfo">Show Info</string>
+    <string name="app_info_question">I love ... </string>
+    <string name="app_info_answer">Wafa !</string>
+</resources>
