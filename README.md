@@ -34,6 +34,15 @@ InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Co
 inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
 ```
 
+### Activity LifeCycles
+
+- onCreate()
+- onStart()
+- onResume()
+- onPause()
+- onRestart()
+- onStop()
+
 
 ## Resources
 
