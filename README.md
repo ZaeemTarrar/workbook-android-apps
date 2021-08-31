@@ -81,6 +81,20 @@ inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
 		- Frame Layout
 			- Scroll View
 
+## Notifications
+
+Toaster
+
+```java
+ Toast.makeText(MainActivity.this,"Enter guess", Toast.LENGTH_SHORT).show();
+```
+
+Snackbar
+
+```java
+Snackbar.make(binding.imageView, messageId, Snackbar.LENGTH_SHORT).show();
+```
+
 ## Binding
 
 ### View Binding
@@ -214,3 +228,65 @@ Then, Change Usage Formation
  binding.invalidateAll();
  binding.hobbyResult.setVisibility(View.VISIBLE);
 ```
+
+## Navigation
+
+### Intent
+
+```java
+Intent intent = new Intent(MainActivity.this, ShowGuess.class);
+intent.putExtra("guess", guess);
+intent.putExtra("name", "bond");
+intent.putExtra("age", 34);
+startActivityForResult(intent, REQUEST_CODE);
+//startActivity(intent);
+```
+
+on Back Navigation or Response
+
+```java
+@Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE) {
+            assert data != null;
+            String message = data.getStringExtra("message_back");
+            Toast.makeText(MainActivity.this, message,
+                    Toast.LENGTH_LONG)
+                    .show();
+        }
+
+    }
+```
+
+Data Bundler
+
+```java
+Bundle extra = getIntent().getExtras();
+```
+
+```java
+if (extra != null) {
+    showGuessTextview.setText(extra.getString("guess"));
+    Log.d("Name extra", "onCreate: " + extra.getString("name"));
+    Log.d("Name extra 2", "onCreate: " + extra.getInt("age"));
+}
+```
+
+Throwing Back Navigation Response
+
+```java
+Intent intent = getIntent();
+intent.putExtra("message_back", "From Second Activity");
+setResult(RESULT_OK, intent);
+finish();
+```
+
+## Permissions
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+
+
