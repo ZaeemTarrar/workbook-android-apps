@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_200"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/api_services_section"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:minWidth="@dimen/thumbnail_button_1_width"
+            android:text="@string/api_services_section_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/room_database_section"
+            android:layout_width="@dimen/thumbnail_button_1_width"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:layout_marginTop="16dp"
+            android:text="@string/room_database_section_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/api_services_section" />
+
+        <Button
+            android:id="@+id/storage_preferences_section"
+            android:layout_width="@dimen/thumbnail_button_1_width"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:text="@string/storage_preferences_section_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/room_database_section" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

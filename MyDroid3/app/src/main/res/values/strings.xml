@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">MyDroid3</string>
+    <string name="app_name"> R.F.M.S </string>
+    <string name="api_services_section_button">API Services Section</string>
+    <string name="room_database_section_button">Room Database Section</string>
+    <string name="storage_preferences_section_button">Storage Preferences Section</string>
+    <string name="api_services_section_roles_section">Roles Section</string>
+    <string name="api_services_section_sub_roles_section">SubRoles Section</string>
+    <string name="api_services_section_users_section">Users Section</string>
+    <string name="api_services_section_authentication_section">Authentication Section</string>
 </resources>

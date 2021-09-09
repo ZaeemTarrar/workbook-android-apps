@@ -1,6 +1,7 @@
 package com.example.mydroid3.controller;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,8 +20,6 @@ public class UniversalRequestHandler extends Application {
 
     public RequestQueue getRequestQueue() {
         if (requestQueue == null) {
-            // getApplicationContext() is key, it keeps you from leaking the
-            // Activity or BroadcastReceiver if someone passes one in.
             requestQueue = Volley.newRequestQueue(getApplicationContext());
         }
         return requestQueue;

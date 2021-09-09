@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_200"
+        tools:context=".ApiServicesSectionActivity">
+
+        <Button
+            android:id="@+id/roles_section_button"
+            android:layout_width="@dimen/thumbnail_button_1_width"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:layout_marginBottom="10dp"
+            android:text="@string/api_services_section_roles_section"
+            app:layout_constraintBottom_toTopOf="@+id/users_section_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/sub_roles_section_button"
+            android:layout_width="@dimen/thumbnail_button_1_width"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:layout_marginBottom="10dp"
+            android:text="@string/api_services_section_authentication_section"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/users_section_button"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <Button
+            android:id="@+id/users_section_button"
+            android:layout_width="@dimen/thumbnail_button_1_width"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:layout_marginBottom="10dp"
+            android:text="@string/api_services_section_sub_roles_section"
+            app:layout_constraintBottom_toTopOf="@+id/authentication_section_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roles_section_button" />
+
+        <Button
+            android:id="@+id/authentication_section_button"
+            android:layout_width="@dimen/thumbnail_button_1_width"
+            android:layout_height="@dimen/thumbnail_button_1_height"
+            android:layout_margin="@dimen/thumbnail_button_1_margin"
+            android:layout_marginBottom="10dp"
+            android:text="@string/api_services_section_users_section"
+            app:layout_constraintBottom_toTopOf="@+id/sub_roles_section_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/users_section_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
